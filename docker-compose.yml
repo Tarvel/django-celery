@@ -12,7 +12,7 @@ services:
     command: python manage.py runserver 0.0.0.0:8000
 
     volumes:
-      - ./dcelery:/usr/scr/app
+      - ./dcelery:/usr/src/app
     ports:
       - 8001:8000
     
@@ -30,7 +30,7 @@ services:
       context: ./dcelery
 
     volumes:
-      - ./dcelery:/usr/scr/app
+      - ./dcelery:/usr/src/app
     environment:
       - DEBUG=1
       - SECRET_KEY=13njk3243k4h2u2hukerhf2of2emff3}$F4[R4R@{]2}2e2e2e]2e2rq0090rmf
