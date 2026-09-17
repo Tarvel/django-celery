@@ -9,7 +9,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dcelery.settings')
 app = Celery('dcelery')
 
 # load the celery configs from the django settings file, using CELERY as name space (anything that starts with CELERY_ in the settings.py file will be used as a celery config)
-app.conf.from_object('django.conf:settings', namespace='CELERY')
+app.config_from_object('django.conf:settings', namespace='CELERY')
 
 @app.task
 def add_numbers():
